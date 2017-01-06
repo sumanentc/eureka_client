@@ -1,4 +1,4 @@
-package com.cuddle.instruction.com.cuddle.instruction.dto;
+package ai.cuddle.instruction.dto;
 
 import java.io.Serializable;
 

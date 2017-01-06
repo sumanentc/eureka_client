@@ -1,4 +1,4 @@
-package com.cuddle.instruction.com.cuddle.instruction.entity;
+package ai.cuddle.instruction.entity;
 
 /**
  * Created by suman.das on 1/6/17.

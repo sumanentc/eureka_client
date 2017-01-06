@@ -1,8 +1,8 @@
-package com.cuddle.instruction.com.cuddle.instruction.controller;
+package ai.cuddle.instruction.controller;
 
-import com.cuddle.instruction.com.cuddle.instruction.dto.InstructionDTO;
-import com.cuddle.instruction.com.cuddle.instruction.entity.Instruction;
-import com.cuddle.instruction.com.cuddle.instruction.service.InstructionService;
+import ai.cuddle.instruction.dto.InstructionDTO;
+import ai.cuddle.instruction.service.InstructionService;
+import ai.cuddle.instruction.entity.Instruction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

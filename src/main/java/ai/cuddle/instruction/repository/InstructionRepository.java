@@ -1,6 +1,6 @@
-package com.cuddle.instruction.com.cuddle.instruction.repository;
+package ai.cuddle.instruction.repository;
 
-import com.cuddle.instruction.com.cuddle.instruction.entity.Instruction;
+import ai.cuddle.instruction.entity.Instruction;
 import org.springframework.data.repository.CrudRepository;
 
 /**
