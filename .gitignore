@@ -80,25 +80,6 @@ hs_err_pid*
 atlassian-ide-plugin.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-
-target/
-codeship.aes
-
-sumith-fractal_simple-rest.aes
-deployment.env
-cuddleai_simple-rest.aes
-*.aes
-codeship.aes
 
 
 target/
-.idea/
-.classpath
-.project
-.settings
-/bin
-card-studio-ui.iml
-*DS_Store

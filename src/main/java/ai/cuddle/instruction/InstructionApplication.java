@@ -9,9 +9,9 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @ComponentScan({"ai.cuddle.instruction.*"})
-public class Application {
+public class InstructionApplication {
     public static void main(String[] args){
-        SpringApplication.run(Application.class);
+        SpringApplication.run(InstructionApplication.class);
 
     }
 }
