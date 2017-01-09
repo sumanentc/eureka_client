@@ -11,15 +11,28 @@ import org.springframework.stereotype.Service;
 @Service
 public class InstructionServiceImpl implements InstructionService {
 
+    @Override
     public boolean validateInstruction (InstructionDTO instructionDTO){
+        /*
         if(instructionDTO.getVersion()==null || instructionDTO.getRules()== null || instructionDTO.getRules().size()==0
                 || instructionDTO.getJob()== null ){
             return false;
         }
+        */
         return true;
     }
-
+    @Override
     public AnalysisDTO execute(InstructionDTO instructionDTO){
-        return null;
+
+        AnalysisDTO analysisDTO = new AnalysisDTO();
+        analysisDTO.setLabel("Hello World Analysis");
+        return  analysisDTO;
+    }
+
+    @Override
+    public InstructionDTO fetchInstruction(long id) {
+        InstructionDTO instructionDTO = new InstructionDTO();
+        instructionDTO.setVersion("1.0.0");
+        return instructionDTO;
     }
 }

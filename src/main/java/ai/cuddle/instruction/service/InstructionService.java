@@ -13,8 +13,9 @@ public interface InstructionService {
 
     boolean validateInstruction (InstructionDTO instructionDTO);
 
-
     AnalysisDTO execute(InstructionDTO instructionDTO);
+
+    InstructionDTO fetchInstruction(long id);
 
 
 }
