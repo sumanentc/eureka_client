@@ -84,5 +84,3 @@ atlassian-ide-plugin.xml
 
 target/
 
-Dockerfile
-docker-entrypoint.sh
