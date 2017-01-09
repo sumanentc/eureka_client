@@ -11,7 +11,7 @@ import ai.cuddle.instruction.dto.InstructionDTO;
 
 public interface InstructionService {
 
-    boolean validateInstruction (InstructionDTO instructionDTO);
+    boolean validate(InstructionDTO instructionDTO);
 
     AnalysisDTO execute(InstructionDTO instructionDTO);
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class InstructionServiceImpl implements InstructionService {
 
     @Override
-    public boolean validateInstruction (InstructionDTO instructionDTO){
+    public boolean validate(InstructionDTO instructionDTO){
         /*
         if(instructionDTO.getVersion()==null || instructionDTO.getRules()== null || instructionDTO.getRules().size()==0
                 || instructionDTO.getJob()== null ){

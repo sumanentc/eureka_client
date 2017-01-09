@@ -20,7 +20,7 @@ public class InstructionController {
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> analyze(@RequestBody InstructionDTO instruction){
-        boolean status = instructionService.validateInstruction(instruction);
+        boolean status = instructionService.validate(instruction);
         if(status){
             AnalysisDTO dto = instructionService.execute(instruction);
             return ResponseEntity.ok().body(dto);
