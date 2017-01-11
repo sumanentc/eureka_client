@@ -84,4 +84,4 @@ atlassian-ide-plugin.xml
 
 target/
 
-*.log
+*.log*

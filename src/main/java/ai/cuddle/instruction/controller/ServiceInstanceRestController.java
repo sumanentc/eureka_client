@@ -1,8 +1,7 @@
 package ai.cuddle.instruction.controller;
 
 import ai.cuddle.instruction.dto.RuleDTO;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -12,34 +11,15 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class ServiceInstanceRestController {
-    //@Autowired
-    //private DiscoveryClient discoveryClient;
 
-    @LoadBalanced
-    @Bean
-    RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
+    @Autowired
+    RestTemplate loadBalancedRestTemplate;
 
-    /**
-    @RequestMapping("/service-instances/{applicationName}")
-    public String  serviceInstancesByApplicationName(@PathVariable String applicationName) {
-        List<ServiceInstance> list = discoveryClient.getInstances(applicationName);
-        if (list != null && list.size() > 0 ) {
-            return list.get(0).getUri().toString();
-        }
-        return null;
-    }*/
-
-    public ResponseEntity<?> executeRule(String serviceName, String version) {
-        String applicationName = serviceName + "-"+version;
-        String url = "http://rule-" + applicationName + "/rule";
-        RuleDTO ruleDTO = new RuleDTO();
-        ruleDTO.setVersion("1.0.0");
-        ruleDTO.setLabel("test-rule");
-        ruleDTO.setId("1");
+    public ResponseEntity<?> executeRule(String serviceName, String version,RuleDTO ruleDTO) {
+        String applicationName = serviceName + "-service-"+version;
+        String url = "http://" + applicationName + "/rule";
         System.out.println("url " + url);
-        ResponseEntity<?> response = restTemplate().postForObject(url,ruleDTO,ResponseEntity.class);
+        ResponseEntity<RuleDTO> response=loadBalancedRestTemplate.postForEntity(url, ruleDTO, RuleDTO.class);
         return response;
     }
 }

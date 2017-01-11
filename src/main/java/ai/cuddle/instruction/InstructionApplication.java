@@ -15,6 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 @RibbonClient(name = "client", configuration = RibbonConfig.class)
 @EnableDiscoveryClient
 public class InstructionApplication {
+
     public static void main(String[] args){
         SpringApplication.run(InstructionApplication.class);
 

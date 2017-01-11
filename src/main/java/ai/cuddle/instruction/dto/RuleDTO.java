@@ -10,6 +10,10 @@ public class RuleDTO {
     private String service;
     private Object bluePrint;
 
+    public RuleDTO(){
+
+    }
+
     public String getId() {
         return id;
     }

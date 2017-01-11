@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by suman.das on 1/6/17.
  */
 @RestController
-@RequestMapping("/instruction/")
+@RequestMapping("/instruction")
 public class InstructionController {
 
     @Autowired
